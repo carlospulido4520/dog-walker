@@ -9,13 +9,15 @@ import { PerfilDogWalkerComponent } from './components/perfil-dog-walker/perfil-
 import { DogWalkerService } from './services/dog-walker.service';
 import { HttpService } from 'src/app/core/services/http.service';
 import { HttpClientModule } from '@angular/common/http';
+import { ContactComponent } from './components/contact/contact.component';
 
 
 @NgModule({
   declarations: [
     HomeDogWalkerComponent,
     ListDogWalkerComponent,
-    PerfilDogWalkerComponent
+    PerfilDogWalkerComponent,
+    ContactComponent
   ],
   imports: [
     SharedModule,

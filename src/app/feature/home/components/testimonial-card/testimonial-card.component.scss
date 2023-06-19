@@ -11,6 +11,10 @@
     @include lt-md {
         flex-direction: column;
     }
+
+    .padding_card {
+        padding: 10px;
+      }
 }
 
 .container_card {

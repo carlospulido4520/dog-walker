@@ -1,1 +1,41 @@
-<p>login works!</p>
+<div class="container_login">
+  <div class="container_image"></div>
+
+  <div class="container_form">
+    <div class="card_form">
+      <div class="w-100">
+        <div class="container_logo">
+          <img src="../../../../../assets/images/logo.png" alt="" />
+        </div>
+
+        <div class="container_form-group mt-2">
+          <p class="color-purpura">
+            <strong>Inicia sesión con tu cuenta</strong>
+          </p>
+
+          <div class="mb-3">
+            <label for="type" class="form-label"> Correo </label>
+            <input id="type" type="email" class="form-control" />
+          </div>
+
+          <div class="mb-3">
+            <label for="type" class="form-label"> Contraseña </label>
+            <input id="type" type="password" class="form-control" />
+          </div>
+
+          <button type="button" class="button_primary btn w-100">
+            Iniciar sesión
+          </button>
+
+          <button
+            type="button"
+            class="button_secundary mt-3 btn w-100"
+            [routerLink]="['/home']"
+          >
+            Cancelar
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

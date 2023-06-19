@@ -7,4 +7,15 @@ export interface Dogwalker {
   calification: string;
   prize: string;
   service: string;
+  schedules?: Schedule[];
+}
+
+export interface Schedule {
+  schedule: string;
+  days: Day[];
+}
+
+export interface Day {
+  day: string;
+  value: boolean;
 }

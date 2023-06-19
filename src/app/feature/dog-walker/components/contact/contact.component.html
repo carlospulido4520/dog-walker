@@ -1,0 +1,81 @@
+<div class="modal-header">
+  <h4 class="modal-title color-purpura">Contactar con Geraldine Lopez</h4>
+  <span class="cursor-pointer" (click)="activeModal.dismiss('Cross click')">
+    <i class="color-purpura bi bi-x-lg"></i>
+  </span>
+</div>
+<div class="modal-body">
+  <div class="container_image">
+    <img
+      class="image_back"
+      src="../../../../../assets/images/huellitas-contratar.jpg"
+      alt=""
+    />
+  </div>
+
+  <div class="content">
+    <div class="row">
+      <div class="col-12">
+        <p class="m-0 color-purpura">
+          <strong>¿Para quién será el paseo?</strong>
+        </p>
+
+        <div class="container_mascots d-flex mt-2">
+          <div class="container_mascot">
+            <p class="color-naranja m-0 mb-1"><strong>Nombre</strong></p>
+            <div class="mascot">
+              <img src="../../../../../assets/images/mascota.jpg" alt="" />
+            </div>
+          </div>
+
+          <div class="container_mascot">
+            <p class="color-naranja m-0 mb-1"><strong>Agregar</strong></p>
+            <div class="add-mascot">
+              <i class="bi bi-plus-lg"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 mt-5">
+        <div class="row">
+          <div class="col-6">
+            <div class="mb-3">
+              <label for="type" class="form-label color-purpura">
+                <strong>Tipo de paseo</strong>
+              </label>
+              <input id="type" type="text" class="form-control" />
+            </div>
+          </div>
+
+          <div class="col-6">
+            <div class="mb-3">
+              <label for="type" class="form-label color-purpura">
+                <strong>Tiempo</strong>
+              </label>
+              <input id="type" type="text" class="form-control" />
+            </div>
+          </div>
+
+          <div class="col-6">
+            <div class="mb-3">
+              <label for="type" class="form-label color-purpura">
+                <strong>Hora</strong>
+              </label>
+              <input id="type" type="text" class="form-control" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal-footer d-flex justify-content-center">
+  <button
+    type="button"
+    class="button_primary btn w-50"
+    (click)="activeModal.close('Close click')"
+  >
+    Pagar
+  </button>
+</div>

@@ -1,0 +1,66 @@
+@import "src/assets/scss/modules/vars";
+@import "src/assets/scss/modules/media-breakpoint";
+
+.container_login {
+  display: flex;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9;
+  background-color: $color-blanco;
+
+  .container_image {
+    background-image: url("../../../../../assets/images/background-login.avif");
+    background-size: contain;
+    background-position: center;
+    width: 50%;
+    background-repeat: no-repeat;
+
+    @include lt-md {
+      display: none;
+    }
+  }
+
+  .container_form {
+    width: 50%;
+    background-color: $color-purpura;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @include lt-md {
+      width: 100%;
+    }
+
+    .card_form {
+      border-radius: 30px;
+      width: 70%;
+      height: 80%;
+      background-color: $color-blanco;
+      padding: 30px 70px;
+      display: flex;
+      justify-content: center;
+
+      .container_logo {
+        display: flex;
+        justify-content: center;
+        height: 70px;
+        img {
+          width: 70px;
+        }
+      }
+
+      .container_form-group {
+        text-align: left;
+      }
+
+      @include lt-md {
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+        padding: 50px 20px;
+      }
+    }
+  }
+}

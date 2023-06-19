@@ -3,26 +3,28 @@
     <div class="row">
       <div class="col-3 d-flex align-items-center justify-content-center">
         <div class="container_img_perfil">
-          <img src="../../../../../assets/images/perfil.enc" alt="" />
+          <img [src]="dogWalker.img" alt="" />
         </div>
       </div>
       <div class="col-9">
-        <h1 class="color-naranja"><strong>Nombre</strong></h1>
-        <span class="color-naranja">Ubicacion</span>
+        <h1 class="color-naranja">
+          <strong> {{ dogWalker.name }} </strong>
+        </h1>
+        <span class="color-naranja">{{ dogWalker.location }}</span>
         <div class="mt-5 d-flex justify-content-between">
           <div class="chip_detail">
             <p>Calificación:</p>
-            <p>8/10</p>
+            <p>{{ dogWalker.calification }}</p>
           </div>
 
           <div class="chip_detail">
-            <p>Calificación:</p>
-            <p>8/10</p>
+            <p>Precio:</p>
+            <p>{{ dogWalker.prize | currency }}</p>
           </div>
 
           <div class="chip_detail">
-            <p>Calificación:</p>
-            <p>8/10</p>
+            <p>Servicios:</p>
+            <p>{{ dogWalker.service }}</p>
           </div>
         </div>
       </div>
@@ -33,20 +35,17 @@
         <div class="col-6 container_detail_info">
           <h3 class="color-purpura">Información personal</h3>
           <p class="color-naranja">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi,
-            incidunt odit voluptate dolore dicta natus, deleniti alias
-            doloremque quod esse neque minima rerum sint inventore repudiandae
-            maxime consectetur facilis ducimus?
+            {{ dogWalker.descrip }}
           </p>
         </div>
         <div class="col-6 d-flex align-items-center justify-content-center">
           <div class="">
             <button type="button" class="button_secundary btn w-100 mb-4">
-              $ 40.000 por noche
+              {{ dogWalker.prize | currency }} por noche
             </button>
 
             <button type="button" class="button_secundary btn w-100">
-              $ 40.000 por noche
+              {{ dogWalker.prize | currency }} por noche
             </button>
           </div>
         </div>
@@ -54,7 +53,13 @@
     </div>
 
     <div class="d-flex justify-content-center mt-5">
-      <button type="button" class="button_secundary btn w-50">Contactar</button>
+      <button
+        type="button"
+        class="button_secundary btn w-50"
+        (click)="contac()"
+      >
+        Contactar
+      </button>
     </div>
   </div>
 </div>
@@ -77,11 +82,11 @@
         </tr>
       </thead>
       <tbody>
-        <tr *ngFor="let horario of horarios">
-          <td>{{ horario.horario }}</td>
+        <tr *ngFor="let schedule of dogWalker.schedules">
+          <td>{{ schedule.schedule }}</td>
 
-          <td *ngFor="let item of horario.dias">
-            <ng-container *ngIf="item.valor; else notAvailable">
+          <td *ngFor="let day of schedule.days">
+            <ng-container *ngIf="day.value; else notAvailable">
               <div class="chip_available"></div>
             </ng-container>
             <ng-template #notAvailable>

@@ -1,4 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { DogWalkerService } from '../../services/dog-walker.service';
+import { Dogwalker } from 'src/app/shared/interfaces/dogwalker.interface';
+import { ActivatedRoute } from '@angular/router';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { ContactComponent } from '../contact/contact.component';
 
 @Component({
   selector: 'app-perfil-dog-walker',
@@ -6,46 +11,38 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./perfil-dog-walker.component.scss'],
 })
 export class PerfilDogWalkerComponent implements OnInit {
-  horarios = [
-    {
-      horario: 'Mañana',
-      dias: [
-        { dia: 'Lunes', valor: true },
-        { dia: 'Martes', valor: false },
-        { dia: 'Miercoles', valor: true },
-        { dia: 'Jueves', valor: false },
-        { dia: 'Viernes', valor: false },
-        { dia: 'Sabado', valor: true },
-        { dia: 'Domingo', valor: false },
-      ],
-    },
-    {
-      horario: 'Tarde',
-      dias: [
-        { dia: 'Lunes', valor: true },
-        { dia: 'Martes', valor: false },
-        { dia: 'Miercoles', valor: true },
-        { dia: 'Jueves', valor: false },
-        { dia: 'Viernes', valor: false },
-        { dia: 'Sabado', valor: true },
-        { dia: 'Domingo', valor: true },
-      ],
-    },
-    {
-      horario: 'Noche',
-      dias: [
-        { dia: 'Lunes', valor: false },
-        { dia: 'Martes', valor: true },
-        { dia: 'Miercoles', valor: false },
-        { dia: 'Jueves', valor: true },
-        { dia: 'Viernes', valor: true },
-        { dia: 'Sabado', valor: false },
-        { dia: 'Domingo', valor: true },
-      ],
-    },
-  ];
+  dogWalker: Dogwalker;
+  idDogWalker: string = '';
 
-  constructor() {}
+  constructor(
+    private dogWalwerService: DogWalkerService,
+    private activeRoute: ActivatedRoute,
+    private modalService: NgbModal
+  ) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.activeRoute.queryParams.subscribe({
+      next: (route) => {
+        ({ id: this.idDogWalker } = route);
+        if (this.idDogWalker) {
+          this.consulDogWalkerByID(this.idDogWalker);
+        }
+      },
+    });
+  }
+
+  async consulDogWalkerByID(id: string) {
+    this.dogWalker = await this.dogWalwerService
+      .consultDogWalkerById(id)
+      .toPromise();
+  }
+
+  contac() {
+    const modalRef = this.modalService.open(ContactComponent, {
+      centered: true,
+      backdrop: 'static',
+      size: 'lg'
+    });
+		modalRef.componentInstance.name = 'World';
+  }
 }

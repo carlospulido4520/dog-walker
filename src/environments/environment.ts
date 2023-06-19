@@ -4,7 +4,16 @@
 
 export const environment = {
   production: false,
-  urlListDogWalker: 'assets/json-data/dog-walkers.json'
+  urlJsonData: 'assets/json-data/',
+  firebaseConfig: {
+    apiKey: 'AIzaSyAMCCoKb5I9YZYvdnQcAGWsTbFmUHBsR90',
+    authDomain: 'dog-love-8c50d.firebaseapp.com',
+    projectId: 'dog-love-8c50d',
+    storageBucket: 'dog-love-8c50d.appspot.com',
+    messagingSenderId: '475869720313',
+    appId: '1:475869720313:web:990311c5f609195a7f3c28',
+    measurementId: 'G-4N3D21V9JD',
+  },
 };
 
 /*

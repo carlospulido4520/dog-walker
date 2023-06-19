@@ -1,0 +1,111 @@
+{
+    "id": "456",
+    "img": "../../../../../assets/images/avatar-carlos.jpg",
+    "name": "Carlos Pulido",
+    "location": "Cartagena",
+    "descrip": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cumque assumenda sed ipsum odit, atque incidunt distinctio deserunt nostrum libero voluptas officiis. Modi expedita nesciunt veritatis eius voluptate pariatur!",
+    "calification": "9/10",
+    "prize": "15000",
+    "service": "80",
+    "schedules": [
+        {
+            "schedule": "Mañana",
+            "days": [
+                {
+                    "day": "Lunes",
+                    "value": true
+                },
+                {
+                    "day": "Martes",
+                    "value": false
+                },
+                {
+                    "day": "Miercoles",
+                    "value": true
+                },
+                {
+                    "day": "Jueves",
+                    "value": false
+                },
+                {
+                    "day": "Viernes",
+                    "value": false
+                },
+                {
+                    "day": "Sabado",
+                    "value": true
+                },
+                {
+                    "day": "Domingo",
+                    "value": false
+                }
+            ]
+        },
+        {
+            "schedule": "Tarde",
+            "days": [
+                {
+                    "day": "Lunes",
+                    "value": true
+                },
+                {
+                    "day": "Martes",
+                    "value": false
+                },
+                {
+                    "day": "Miercoles",
+                    "value": true
+                },
+                {
+                    "day": "Jueves",
+                    "value": false
+                },
+                {
+                    "day": "Viernes",
+                    "value": false
+                },
+                {
+                    "day": "Sabado",
+                    "value": true
+                },
+                {
+                    "day": "Domingo",
+                    "value": true
+                }
+            ]
+        },
+        {
+            "schedule": "Noche",
+            "days": [
+                {
+                    "day": "Lunes",
+                    "value": false
+                },
+                {
+                    "day": "Martes",
+                    "value": true
+                },
+                {
+                    "day": "Miercoles",
+                    "value": false
+                },
+                {
+                    "day": "Jueves",
+                    "value": true
+                },
+                {
+                    "day": "Viernes",
+                    "value": true
+                },
+                {
+                    "day": "Sabado",
+                    "value": false
+                },
+                {
+                    "day": "Domingo",
+                    "value": true
+                }
+            ]
+        }
+    ]
+}

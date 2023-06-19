@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Testimonial } from 'src/app/shared/interfaces/testimonials.interface';
+import { TestimonialsService } from '../../services/testimonials.service';
 
 @Component({
   selector: 'app-testimonial-card',
@@ -9,36 +10,15 @@ import { Testimonial } from 'src/app/shared/interfaces/testimonials.interface';
 export class TestimonialCardComponent implements OnInit {
   public testimonials: Testimonial[] = [];
 
+  constructor(private testimonialsService: TestimonialsService) {}
 
   ngOnInit(): void {
-    this.testimonials = [
-      {
-        name: 'German',
-        avatar: '../../assets/images/avatar-1.jpg',
-        testimonial: `Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maiores quam
-        magnam earum quibusdam impedit velit explicabo suscipit accusamus
-        beatae, soluta quo alias asperiores quia consequuntur odio voluptatum,
-        dolores ullam fugiat.`,
-        date: '15/12/2021 · 8:15 AM',
-      },
-      {
-        name: 'Marina',
-        avatar: '../../assets/images/avatar-2.avif',
-        testimonial: `Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maiores quam
-        magnam earum quibusdam impedit velit explicabo suscipit accusamus
-        beatae, soluta quo alias asperiores quia consequuntur odio voluptatum,
-        dolores ullam fugiat.`,
-        date: '15/12/2021 · 8:15 AM',
-      },
-      {
-        name: 'Andres',
-        avatar: '../../assets/images/avatar-3.jpg',
-        testimonial: `Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maiores quam
-        magnam earum quibusdam impedit velit explicabo suscipit accusamus
-        beatae, soluta quo alias asperiores quia consequuntur odio voluptatum,
-        dolores ullam fugiat.`,
-        date: '15/12/2021 · 8:15 AM',
-      },
-    ];
+    this.consultTestimonials();
+  }
+
+  async consultTestimonials() {
+    this.testimonials = await this.testimonialsService
+      .consultListTestimonials()
+      .toPromise();
   }
 }

@@ -8,11 +8,19 @@ import { environment } from 'src/environments/environment';
   providedIn: 'root',
 })
 export class DogWalkerService {
-  private urlData = environment.urlListDogWalker;
+  private urlData = environment.urlJsonData;
 
   constructor(protected httpService: HttpService) {}
 
   consultListDogWalker(): Observable<Dogwalker[]> {
-    return this.httpService.doGet<Dogwalker[]>(this.urlData);
+    return this.httpService.doGet<Dogwalker[]>(
+      `${this.urlData}dog-walkers.json`
+    );
+  }
+
+  consultDogWalkerById(id: string): Observable<Dogwalker> {
+    return this.httpService.doGet<Dogwalker>(
+      `${this.urlData}dog-walker-${id}.json`
+    );
   }
 }

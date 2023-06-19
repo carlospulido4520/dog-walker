@@ -1,4 +1,5 @@
 @import "src/assets/scss/modules/vars";
+@import "src/assets/scss/modules/media-breakpoint";
 
 .container_perfil {
   background-color: $color-purpura;
@@ -8,6 +9,10 @@
 
   .container_main_info {
     width: 70%;
+
+    @include lt-md {
+      width: 100%;
+    }
 
     .container_img_perfil {
       width: 200px;

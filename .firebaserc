@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "dog-love-8c50d": {
+      "hosting": {
+        "dog-love": [
+          "dog-love-8c50d"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "dog-love-8c50d"
+  }
+}
