@@ -1,0 +1,123 @@
+@import "src/assets/scss/modules/vars";
+@import "src/assets/scss/modules/media-breakpoint";
+
+.container_home {
+  .container_home_intro {
+    margin-bottom: 140px;
+
+    @include sm {
+      margin-bottom: 50px;
+    }
+
+    .figure {
+      transform: rotate(35.69deg);
+      height: 460px;
+      width: 600px;
+      background: $color-purpura;
+      top: 77px;
+      border-radius: 30px;
+
+      @include xs {
+        transform: none;
+        border-radius: 0;
+      }
+
+      @include sm {
+        transform: none;
+        border-radius: 0;
+        width: 100%;
+      }
+
+    }
+
+    .container_texto {
+      position: absolute;
+      right: 100px;
+      width: 50%;
+      top: 150px;
+      text-align: end;
+      padding: 0 100px;
+      line-height: 50px;
+
+      @include xs {
+        right: 0;
+        width: 100%;
+      }
+
+      @include sm {
+        right: 0;
+        width: 100%;
+      }
+
+      p {
+        margin: 0;
+        color: $color-naranja;
+      }
+
+      .font-size-titulo {
+        font-size: 32px;
+      }
+
+      .font-size-mascotas {
+        font-size: 64px;
+      }
+
+      .descrip p {
+        color: $color-purpura;
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 29px;
+
+        @include xs {
+          color: $color-naranja;
+        }
+
+        @include sm {
+          color: $color-naranja;
+        }
+      }
+    }
+  }
+
+  .container_home_funcion {
+    display: flex;
+    justify-content: center;
+
+    .tarjeta_funcion {
+      background-color: $color-blanco;
+      padding: 30px;
+      width: 60%;
+
+      @include xs {
+        width: 100%;
+      }
+
+      @include sm {
+        width: 100%;
+      }
+
+      border-radius: 30px;
+      img {
+        width: 40%;
+      }
+
+      .titulo {
+        color: $color-naranja;
+        font-size: 36px;
+        @include xs {
+          font-size: 20px;
+        }
+      }
+
+      .descrip {
+        color: $color-purpura;
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 29px;
+        @include xs {
+          font-size: 18px;
+        }
+      }
+    }
+  }
+}

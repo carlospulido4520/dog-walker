@@ -1,0 +1,22 @@
+<div class="container_cards">
+  <div class="padding_card" *ngFor="let item of testimonials; index as i">
+    <div class="container_card index_{{ i }}">
+      <div class="card_tittle">
+        <div class="imagen_nombre">
+          <img [src]="item.avatar" alt="" />
+          <div class="nombre">
+            <h5>{{ item.name }}</h5>
+          </div>
+        </div>
+      </div>
+      <div class="card_body">
+        <p class="testimonio">
+          {{ item.testimonial }}
+        </p>
+      </div>
+      <div class="card_footer">
+        <p class="role">{{ item.date }}</p>
+      </div>
+    </div>
+  </div>
+</div>

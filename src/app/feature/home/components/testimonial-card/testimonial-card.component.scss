@@ -1,0 +1,88 @@
+@import "src/assets/scss/modules/vars";
+@import "src/assets/scss/modules/media-breakpoint";
+
+.container_cards {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    top: -15px;
+    z-index: 2;
+
+    @include lt-md {
+        flex-direction: column;
+    }
+}
+
+.container_card {
+    height: 258px;
+    background: #FFFFFF;
+    border: 1px solid #EDF0F6;
+    border-radius: 9px;
+    padding: 18px;
+    position: relative;
+}
+
+.container_card img {
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+}
+
+.card_tittle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.imagen_nombre {
+    display: flex;
+}
+
+.nombre {
+
+    h5,
+    p {
+        margin: 0px;
+    }
+
+    margin-left: 17px;
+    color: $color-purpura;
+}
+
+.card_body {
+    margin-top: 16px;
+    .testimonio {
+        font-size: 13px;
+      }
+}
+
+.card_footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    bottom: 0;
+    width: 92%;
+}
+
+.index_1,
+.index_2 {
+    @include lt-md {
+        display: none;
+    }
+}
+
+.logo img {
+    width: 100%;
+    height: 100%;
+}
+
+.role {
+  font-size: 11px;
+  color: $color-purpura;
+}
+
+.recurso{
+  font-size: 11px;
+  color: #91460E;
+}

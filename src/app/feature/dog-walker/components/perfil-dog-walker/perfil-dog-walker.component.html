@@ -1,0 +1,95 @@
+<div class="container_perfil">
+  <div class="container_main_info">
+    <div class="row">
+      <div class="col-3 d-flex align-items-center justify-content-center">
+        <div class="container_img_perfil">
+          <img src="../../../../../assets/images/perfil.enc" alt="" />
+        </div>
+      </div>
+      <div class="col-9">
+        <h1 class="color-naranja"><strong>Nombre</strong></h1>
+        <span class="color-naranja">Ubicacion</span>
+        <div class="mt-5 d-flex justify-content-between">
+          <div class="chip_detail">
+            <p>Calificación:</p>
+            <p>8/10</p>
+          </div>
+
+          <div class="chip_detail">
+            <p>Calificación:</p>
+            <p>8/10</p>
+          </div>
+
+          <div class="chip_detail">
+            <p>Calificación:</p>
+            <p>8/10</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container_detail mt-5">
+      <div class="row">
+        <div class="col-6 container_detail_info">
+          <h3 class="color-purpura">Información personal</h3>
+          <p class="color-naranja">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi,
+            incidunt odit voluptate dolore dicta natus, deleniti alias
+            doloremque quod esse neque minima rerum sint inventore repudiandae
+            maxime consectetur facilis ducimus?
+          </p>
+        </div>
+        <div class="col-6 d-flex align-items-center justify-content-center">
+          <div class="">
+            <button type="button" class="button_secundary btn w-100 mb-4">
+              $ 40.000 por noche
+            </button>
+
+            <button type="button" class="button_secundary btn w-100">
+              $ 40.000 por noche
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="d-flex justify-content-center mt-5">
+      <button type="button" class="button_secundary btn w-50">Contactar</button>
+    </div>
+  </div>
+</div>
+
+<div class="d-flex justify-content-center mt-5">
+  <div class="container_table">
+    <h3 class="color-purpura text-center">Horarios disponibles</h3>
+
+    <table class="table mt-5">
+      <thead>
+        <tr>
+          <th scope="col"></th>
+          <th scope="col">Lunes</th>
+          <th scope="col">Martes</th>
+          <th scope="col">Miercoles</th>
+          <th scope="col">Jueves</th>
+          <th scope="col">Viernes</th>
+          <th scope="col">Sábado</th>
+          <th scope="col">Domingo</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let horario of horarios">
+          <td>{{ horario.horario }}</td>
+
+          <td *ngFor="let item of horario.dias">
+            <ng-container *ngIf="item.valor; else notAvailable">
+              <div class="chip_available"></div>
+            </ng-container>
+            <ng-template #notAvailable>
+              <div class="chip_not_available"></div>
+            </ng-template>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

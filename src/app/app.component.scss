@@ -1,0 +1,12 @@
+@import "src/assets/scss/modules/media-breakpoint";
+
+.container-app {
+  position: absolute;
+  width: 100%;
+  top: 95px;
+
+  @include  lt-md {
+    width: initial;
+    position: absolute;
+  }
+}

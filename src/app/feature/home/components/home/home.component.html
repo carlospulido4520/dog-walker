@@ -1,0 +1,53 @@
+<div class="container_home">
+  <div class="container_home_intro">
+    <div class="figure"></div>
+    <div class="container_texto">
+      <p class="font-size-titulo">Servicio para</p>
+      <p class="font-size-mascotas"><strong>Mascotas</strong></p>
+      <p class="font-size-titulo">A domicilio</p>
+
+      <div class="descrip">
+        <p>
+          Todos nuestros servicios cuentan con personal altamente calificado,
+          encuentra un paseador a domicilio y online.
+        </p>
+      </div>
+
+      <div class="d-flex justify-content-center mt-5">
+        <button
+          type="button"
+          class="button_primary btn w-50"
+          [routerLink]="['/dog-walker/search']"
+        >
+          Solicitalo aquí
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="container_home_funcion mb-5">
+    <div class="tarjeta_funcion">
+      <div class="d-flex align-items-center justify-content-between">
+        <div>
+          <p class="titulo">
+            <strong> ¿Cómo funcionamos?</strong>
+          </p>
+          <p class="descrip">
+            <strong>Pide el servicio para tu Mascota</strong>
+          </p>
+          <p class="descrip">
+            <strong>Un aliado acepta su serviciop</strong>
+          </p>
+          <p class="descrip">
+            <strong>Tu mascota disfruta y ahorras tiempo</strong>
+          </p>
+        </div>
+
+        <img src="../../../../../assets/images/huellitas-home.jpg" alt="" />
+      </div>
+    </div>
+  </div>
+
+  <div class="mb-5">
+    <app-testimonials></app-testimonials>
+  </div>
+</div>

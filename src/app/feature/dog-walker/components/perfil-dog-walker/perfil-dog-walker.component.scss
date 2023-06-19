@@ -1,0 +1,62 @@
+@import "src/assets/scss/modules/vars";
+
+.container_perfil {
+  background-color: $color-purpura;
+  display: flex;
+  justify-content: center;
+  padding: 50px;
+
+  .container_main_info {
+    width: 70%;
+
+    .container_img_perfil {
+      width: 200px;
+
+      img {
+        width: 100%;
+        border-radius: 50%;
+      }
+    }
+
+    .chip_detail {
+      background-color: $color-gris-claro;
+      border-radius: 30px;
+      text-align: center;
+      padding: 5px 50px;
+      p {
+        margin: 0;
+        font-size: 12px;
+      }
+    }
+  }
+
+  .container_detail {
+    background-color: $color-blanco;
+    padding: 30px;
+    border-radius: 30px;
+
+    .container_detail_info {
+      border-right: 1px solid $color-purpura;
+    }
+  }
+}
+
+.container_table {
+  background-color: $color-blanco;
+  border-radius: 30px;
+  padding: 30px;
+
+  .chip_available{
+    background-color: $color-verde;
+    height: 20px;
+    width: 70px;
+    border-radius: 30px;
+  }
+
+  .chip_not_available{
+    background-color: $color-rojo;
+    height: 20px;
+    width: 70px;
+    border-radius: 30px;
+  }
+}

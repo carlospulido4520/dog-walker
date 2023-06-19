@@ -1,0 +1,20 @@
+/* Modules */
+@import "assets/scss/modules/vars";
+@import "assets/scss/modules/media-breakpoint";
+
+
+/* Partials */
+@import "assets/scss/partials/global";
+@import "assets/scss/partials/buttons";
+@import "assets/scss/partials/inputs";
+
+/* Estilos bootstrap */
+@import "~bootstrap/scss/bootstrap";
+
+:root {
+  background-color: $color-azul-background;
+}
+
+body {
+  background-color: $color-azul-background;
+}

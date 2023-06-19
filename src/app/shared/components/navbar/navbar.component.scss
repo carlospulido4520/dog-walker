@@ -1,0 +1,27 @@
+@import "src/assets/scss/modules/vars";
+
+.container_navbar {
+  position: fixed;
+  width: 100%;
+  z-index: 5;
+  background-color: $color-blanco;
+  padding: 20px 70px;
+  border-radius: 0px 0px 30px 30px;
+  box-shadow: 0 3px 6px #00000029;
+
+  img {
+    width: 50px;
+  }
+
+  a {
+    color: $color-naranja;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+
+  .line-vertical {
+    border: 1px solid  $color-naranja;
+    height: 40px;
+    margin: 0 30px;
+  }
+}

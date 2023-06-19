@@ -1,0 +1,22 @@
+<div class="container_navbar">
+  <div class="row align-items-center">
+    <div class="col-3">
+      <img src="../../../../assets/images/logo.png" alt="logo" />
+    </div>
+    <div class="col-9">
+      <div class="d-flex justify-content-end align-items-center">
+        <a [routerLink]="['/home']">Inicio</a>
+
+        <div class="line-vertical"></div>
+
+        <button
+          [routerLink]="['/auth/login']"
+          type="button"
+          class="button_primary btn"
+        >
+          Iniciar sesión
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
