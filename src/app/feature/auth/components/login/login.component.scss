@@ -29,6 +29,12 @@
     align-items: center;
     justify-content: center;
 
+    .spinner-border {
+      width: 100px;
+      height: 100px;
+      color: $color-blanco;
+    }
+
     @include lt-md {
       width: 100%;
     }

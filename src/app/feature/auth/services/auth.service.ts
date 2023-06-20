@@ -7,19 +7,8 @@ import { Subscription, from } from 'rxjs';
 })
 export class AuthService {
   public user: any;
-  subscription!: Subscription;
 
-  constructor(public afAuth: AngularFireAuth) {
-    this.subscription = this.afAuth.authState.subscribe((user) => {
-      console.log(user)
-      if (user) {
-        this.user = user;
-        localStorage.setItem('user', JSON.stringify(this.user));
-      } else {
-        localStorage.setItem('user', '');
-      }
-    });
-  }
+  constructor(public afAuth: AngularFireAuth) {}
 
   login(email: string, password: string) {
     return from(this.afAuth.signInWithEmailAndPassword(email, password));
@@ -27,5 +16,9 @@ export class AuthService {
 
   register(email: string, password: string) {
     return from(this.afAuth.createUserWithEmailAndPassword(email, password));
+  }
+
+  async logout() {
+    await this.afAuth.signOut();
   }
 }

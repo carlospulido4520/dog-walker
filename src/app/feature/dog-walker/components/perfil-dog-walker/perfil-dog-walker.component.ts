@@ -41,8 +41,8 @@ export class PerfilDogWalkerComponent implements OnInit {
     const modalRef = this.modalService.open(ContactComponent, {
       centered: true,
       backdrop: 'static',
-      size: 'lg'
+      size: 'lg',
     });
-		modalRef.componentInstance.name = 'World';
+    modalRef.componentInstance.dogWalker = this.dogWalker;
   }
 }
